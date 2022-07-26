@@ -13,6 +13,7 @@ import { CardComponent } from '../components/card/card.component';
 import { FooterComponent } from 'src/app/layout/footer/footer.component';
 import { HeaderComponent } from 'src/app/layout/header/header.component';
 import { AccueilComponent } from './accueil/accueil.component';
+import { ListeCardComponent } from '../components/liste-card/liste-card.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,9 @@ import { AccueilComponent } from './accueil/accueil.component';
     AccueilComponent,
     CardComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    ListeCardComponent,
+    DetailComponent
   ],
   imports: [
     CommonModule,

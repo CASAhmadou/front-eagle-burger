@@ -1,52 +1,47 @@
 <app-header></app-header>
-<div class="container-fluid d-flex justify-content-center">
 
-<div id="carouselExampleControls" class="carousel slide col-4" data-bs-ride="carousel">
-    <div class="carousel-inner">
-      <div class="carousel-item active w-50">
-        <a href="#" routerLink="/produits/menus" class="card-link">
-        <img  src="../../../../assets/images/nav.jpg" class="d-block w-100" alt="...">
-      </a>
-      </div>
-      <div class="carousel-item">
-        <img src="../../../../assets/images/ma.jpg" class="d-block w-50"  alt="...">
-      </div>
-      <div class="carousel-item">
-        <img src="../../../../assets/images/mc.jpg" class="d-block w-50" alt="...">
-      </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div>
+<div class="container d-flex justify-content-around" >
 
-  <div id="carouselExampleControls" class="carousel slide w-50" data-bs-ride="carousel">
-      <div class="carousel-inner">
-        <div class="carousel-item active w-50">
-          <a href="#" routerLink="/produits/menus" class="card-link">
-          <img  src="../../../../assets/images/ma.jpg" class="d-block w-50" alt="...">
-        </a>
-        </div>
-        <div class="carousel-item">
-          <img src="../../../../assets/images/ma.jpg" class="d-block w-50"  alt="...">
-        </div>
-        <div class="carousel-item">
-          <img src="../../../../assets/images/mc.jpg" class="d-block w-50" alt="...">
-        </div>
-      </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-    </div>
+  <app-liste-card></app-liste-card>
+  <app-liste-card></app-liste-card>
+ 
+</div>
+
+<div class="container d-flex justify-content-around" >
+  <div class="w-50">
+    <table class="table table-borderless">
+      <thead>
+        <tr>
+          <th scope="col">Quartier</th>
+          <th scope="col">Prix</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Yeumbeul</td>
+          <td>Medina</td>
+        </tr>
+        <tr>
+          <td>1000</td>
+          <td>3000</td>
+        </tr>
+
+      </tbody>
+    </table>
   </div>
+  <div>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> 
+      Error tempore illo dolore incidunt asperiores et deserunt harum quo temporibus commodi,<br>
+      aperiam nostrum,placeat quas quod non ea delectus labore tempora?<br>
+      Odit distinctio id reprehenderit modi eius veniam est earum dicta voluptas vel suscipit iure doloremque,<br>
+       rerum sint dolorem repudiandae, exercitationem sit nihil. Quis tempora facilis fuga repellendus, natus nemo neque?<br>
+      Ipsam, error officia sapiente, atque ratione dignissimos voluptatibus nisi repudiandae, facere commodi quaerat quasi blanditiis.<br> 
+      Eligendi cupiditate vitae quidem quos deserunt, perspiciatis minus excepturi ut consequatur. Libero dolores numquam autem!
+    </p>
+  </div>
+</div>
+
+
+
 <app-footer></app-footer>
