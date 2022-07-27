@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ProduitComponent } from './produit.component';
 import { MenuComponent } from './catalogue/menu/menu.component';
 import { BurgerComponent } from './catalogue/burger/burger.component';
 import { RouterModule } from '@angular/router';
@@ -14,10 +13,10 @@ import { FooterComponent } from 'src/app/layout/footer/footer.component';
 import { HeaderComponent } from 'src/app/layout/header/header.component';
 import { AccueilComponent } from './accueil/accueil.component';
 import { ListeCardComponent } from '../components/liste-card/liste-card.component';
+import { ProdComponent } from '../components/prod/prod.component';
 
 @NgModule({
   declarations: [
-    ProduitComponent,
     MenuComponent,
     BurgerComponent,
     AccueilComponent,
@@ -25,7 +24,8 @@ import { ListeCardComponent } from '../components/liste-card/liste-card.componen
     HeaderComponent,
     FooterComponent,
     ListeCardComponent,
-    DetailComponent
+    DetailComponent,
+    ProdComponent
   ],
   imports: [
     CommonModule,

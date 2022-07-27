@@ -9,6 +9,7 @@ import { Post } from '../models/post';
 export class ServiceService {
 
   private url:string = "https://localhost:3000/posts"
+  // https://projetfilrouge.herokuapp.com/api
 
   constructor(private http:HttpClient) { }
 
