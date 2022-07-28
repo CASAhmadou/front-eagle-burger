@@ -1,3 +1,8 @@
-<app-prod></app-prod>
 
-<!-- <app-prod [produits]="menus"></app-prod> -->
+<ng-container *ngIf="(menus$|async) as menus">
+
+    <app-prod [prod]="menus?.menu"></app-prod>
+
+</ng-container>
+
+

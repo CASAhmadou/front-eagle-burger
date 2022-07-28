@@ -4,12 +4,12 @@ import { RouterModule, Routes } from '@angular/router';
 import { MenuComponent } from './catalogue/menu/menu.component';
 import { BurgerComponent } from './catalogue/burger/burger.component';
 import { DetailComponent } from './detail/detail.component';
-import { AccueilComponent } from './accueil/accueil.component';
 import { BoissonComponent } from './complements/boisson/boisson.component';
 import { FriteComponent } from './complements/frite/frite.component';
+import { CatalogueComponent } from './catalogue/catalogue.component';
 
 const routes: Routes = [
-  { path: '', component: AccueilComponent},
+  { path: '', component: CatalogueComponent},
   { path: 'menus', component: MenuComponent},
   { path: 'burgers', component: BurgerComponent},
   { path: 'boisson', component: BoissonComponent},

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Catalogue } from 'src/app/client/shared/models/catalogue';
 import { Post } from 'src/app/client/shared/models/post';
+import { Produit } from 'src/app/client/shared/models/produit';
 import { ServiceService } from 'src/app/client/shared/services/service.service';
 
 @Component({
@@ -10,11 +12,14 @@ import { ServiceService } from 'src/app/client/shared/services/service.service';
 })
 export class BurgerComponent implements OnInit {
   // key:string ="Burger"
-  burgers$ : Observable<Post[]> | null = null;
+  // burger:[] =[]
+
+  burgers$ : Observable<Catalogue> | null = null;
   constructor(private serv:ServiceService) { }
 
   ngOnInit(): void {
-    this.burgers$ = this.serv.all();
+    // this.serv.getCatalogue().subscribe((data)=>this.burgers=data)
+    this.burgers$ = this.serv.getCatalogue();
   }
 
 }

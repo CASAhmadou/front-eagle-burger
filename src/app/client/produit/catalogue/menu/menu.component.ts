@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Catalogue } from 'src/app/client/shared/models/catalogue';
 import { Post } from 'src/app/client/shared/models/post';
 import { ServiceService } from 'src/app/client/shared/services/service.service';
 
@@ -10,12 +11,14 @@ import { ServiceService } from 'src/app/client/shared/services/service.service';
 })
 export class MenuComponent implements OnInit {
 // key:string ="Menu"
-// menus:[]=[]
-menus$ : Observable<Post[]> | null = null;
+
+menus$: Observable<Catalogue> | null = null
+// menu:[]=[]
+
   constructor(private serv:ServiceService) { }
 
   ngOnInit(): void {
-    this.menus$ = this.serv.all();
+    this.menus$ = this.serv.getCatalogue();
   }
 
 }

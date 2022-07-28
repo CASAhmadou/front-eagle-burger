@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Post } from '../../shared/models/post';
+import { ServiceService } from '../../shared/services/service.service';
 
 @Component({
   selector: 'app-detail',
@@ -7,9 +10,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DetailComponent implements OnInit {
 
-  constructor() { }
+  // @Input('posts') post : Post|null = null;
+  burgers$ : Observable<Post[]> | null = null;
+  constructor(private serv: ServiceService) { }
 
   ngOnInit(): void {
+    // this.serv.post$;
   }
 
 }

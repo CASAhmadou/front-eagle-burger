@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Post } from '../../shared/models/post';
+import { Produit } from '../../shared/models/produit';
 
 @Component({
   selector: 'app-card',
@@ -7,8 +8,10 @@ import { Post } from '../../shared/models/post';
   styleUrls: ['./card.component.css']
 })
 export class CardComponent implements OnInit {
-// @Input() produit: any
-@Input('posts') post : Post|null = null; 
+
+  @Input() produit:Produit|null=null
+
+// @Input('posts') post : Post|null = null;
   constructor() { }
 
   ngOnInit(): void {

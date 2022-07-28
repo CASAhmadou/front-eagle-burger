@@ -1,18 +1,14 @@
 
-<!-- <div class="card" style="width: 18rem">
-  <h5 class="">Menu a</h5>
-
-  <a href="#" routerLink="/produits/detail/1" class="btn ">
-    <img src="../../../../assets/images/mc.jpg" class="card-img-top" alt="...">
-    <p class="card-text">2500f</p>
-  </a>
-</div> -->
-
 <div class="card" style="width: 18rem">
-  <h5 class="">Menu a</h5>
 
-  <a href="#" routerLink="/produit/detail/{{post?.id}}" class="btn ">
-    <img [src]="post?.image" class="card-img-top" alt="...">
-    <p class="card-text">{{post?.prix}}</p>
+  <h5 class="">{{produit?.nom}}</h5>
+
+  <a href="#" routerLink="/produits/detail/{{produit?.id}}" class="btn ">
+
+    <img src="data:images/png;base64,{{produit?.image}}" class="card-img-top" alt="...">
+
+    <p class="card-text">{{produit?.prix}}</p>
+
   </a>
+
 </div>

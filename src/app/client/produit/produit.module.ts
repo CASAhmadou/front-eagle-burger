@@ -11,21 +11,21 @@ import { ClientModule } from '../client.module';
 import { CardComponent } from '../components/card/card.component';
 import { FooterComponent } from 'src/app/layout/footer/footer.component';
 import { HeaderComponent } from 'src/app/layout/header/header.component';
-import { AccueilComponent } from './accueil/accueil.component';
 import { ListeCardComponent } from '../components/liste-card/liste-card.component';
 import { ProdComponent } from '../components/prod/prod.component';
+import { CatalogueComponent } from './catalogue/catalogue.component';
 
 @NgModule({
   declarations: [
     MenuComponent,
     BurgerComponent,
-    AccueilComponent,
     CardComponent,
     HeaderComponent,
     FooterComponent,
     ListeCardComponent,
     DetailComponent,
-    ProdComponent
+    ProdComponent,
+    CatalogueComponent
   ],
   imports: [
     CommonModule,

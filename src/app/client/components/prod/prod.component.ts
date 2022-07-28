@@ -1,7 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
 import { Post } from '../../shared/models/post';
-import { ServiceService } from '../../shared/services/service.service';
+import { Produit } from '../../shared/models/produit';
 
 @Component({
   selector: 'app-prod',
@@ -9,14 +8,13 @@ import { ServiceService } from '../../shared/services/service.service';
   styleUrls: ['./prod.component.css']
 })
 export class ProdComponent implements OnInit {
-  // @Input() produits=[]
+  @Input('prod') produits:Produit[]|undefined=[]
 
   // @Input('posts') post : Post|null = null;
-  posts$ : Observable<Post[]> | null = null;
-  constructor(private serv: ServiceService) { }
+  constructor() { }
 
   ngOnInit(): void {
-    this.posts$ = this.serv.all();
+    // this.posts$ = this.serv.all();
   }
 
 }
