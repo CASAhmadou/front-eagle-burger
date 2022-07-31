@@ -12,13 +12,13 @@ import { ServiceService } from 'src/app/client/shared/services/service.service';
 export class MenuComponent implements OnInit {
 // key:string ="Menu"
 
-menus$: Observable<Catalogue> | null = null
+// menus$: Observable<Catalogue> | null = null
 // menu:[]=[]
 
   constructor(private serv:ServiceService) { }
 
   ngOnInit(): void {
-    this.menus$ = this.serv.getCatalogue();
+    // this.menus$ = this.serv.getCatalogue();
   }
 
 }

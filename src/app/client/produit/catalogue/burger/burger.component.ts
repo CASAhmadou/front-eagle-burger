@@ -12,14 +12,34 @@ import { ServiceService } from 'src/app/client/shared/services/service.service';
 })
 export class BurgerComponent implements OnInit {
   // key:string ="Burger"
-  // burger:[] =[]
+
+
+  // post$: Observable<Post[]>|null = null
 
   burgers$ : Observable<Catalogue> | null = null;
+   burger: Produit[]|undefined = undefined
   constructor(private serv:ServiceService) { }
 
   ngOnInit(): void {
-    // this.serv.getCatalogue().subscribe((data)=>this.burgers=data)
-    this.burgers$ = this.serv.getCatalogue();
+
+    this.serv.getCatalogue().subscribe(data=>{
+      this.burger = data.produit
+    })
+    // this.post$ = this.serv.all().subscribe((data)=>{})
+
+    // this.serv.getCatalogue().subscribe((data)=>
+    // {
+    //   // console.log(data)
+    // })
+    // this.burgers$ = this.serv.getCatalogue();
   }
+
+  // filter(type: string){
+  //   this.serv.getCatalogue().subscribe(data =>{
+  //     if(type!=""){
+  //       this.burger = data.produit?.filter(prod= prod.type === type)
+  //     }
+  //   })
+  // }
 
 }

@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
 import { Post } from '../../shared/models/post';
 import { ServiceService } from '../../shared/services/service.service';
@@ -11,11 +12,19 @@ import { ServiceService } from '../../shared/services/service.service';
 export class DetailComponent implements OnInit {
 
   // @Input('posts') post : Post|null = null;
-  burgers$ : Observable<Post[]> | null = null;
-  constructor(private serv: ServiceService) { }
+  produit$ : Observable<Post[]> | null = null;
 
-  ngOnInit(): void {
-    // this.serv.post$;
+
+    constructor(private serv:ServiceService,private route: ActivatedRoute) {
+
   }
+ private id :any = 0;
+ private type:any =""
+ ngOnInit(): void {
+   this.id = this.route.snapshot.paramMap.get('id');
+   this.type = this.route.snapshot.paramMap.get('type');
+   console.log(this.id);
+  //  this.produit$ = this.serv.produit$(this.id,this.type);
+ }
 
 }

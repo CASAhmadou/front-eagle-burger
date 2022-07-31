@@ -10,15 +10,23 @@ import { ServiceService } from '../../shared/services/service.service';
 })
 export class ListeCardComponent implements OnInit {
   @Input('posts') post : Post|null = null;
-  
+
   constructor(private router:Router) { }
 
   ngOnInit(): void {
 
   }
 
-  menuOuvert(){
+  menuOuvert(): void{
     this.router.navigateByUrl("/produits/menus")
   }
+
+  // filter(type: string){
+  //   this.serv.getCatalogue().subscribe(data =>{
+  //     if(type!=""){
+  //       this.catalogue = data.produit?.filter(prod= prod.type === type)
+  //     }
+  //   })
+  // }
 
 }

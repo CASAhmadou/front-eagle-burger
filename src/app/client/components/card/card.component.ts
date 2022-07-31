@@ -9,7 +9,7 @@ import { Produit } from '../../shared/models/produit';
 })
 export class CardComponent implements OnInit {
 
-  @Input() produit:Produit|null=null
+  @Input('burgers') produit:Produit|undefined=undefined
 
 // @Input('posts') post : Post|null = null;
   constructor() { }

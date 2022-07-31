@@ -10,7 +10,7 @@ import { Produit } from '../../shared/models/produit';
 export class ProdComponent implements OnInit {
   @Input('prod') produits:Produit[]|undefined=[]
 
-  // @Input('posts') post : Post|null = null;
+  // @Input('posts') posts : Post|null = null;
   constructor() { }
 
   ngOnInit(): void {
